@@ -24,16 +24,26 @@ header {
     left: 0;
     right: 0;
 
-    @media(orientation: landscape) {
+    @media (orientation: landscape) {
         height: 20vh;
+    }
+
+    @media (min-height: 1024px) {
+        height: 90px;
     }
 
     @media(min-width: 750px) {
         box-shadow: none;
     }
 
-    img {
+    @media (min-width: 1024px) {
+        height: 90px;
+        width: 750px;
+    }
+
+    .noSolaceLogo {
         width: 95%;
+        max-height: 87px;
         max-width: 750px;
     }
 }
@@ -56,6 +66,7 @@ header {
             right: 10px;
             top: 10vh;
             animation: glow 2s infinite linear;
+            cursor: pointer;
 
             @media(min-width: 750px) and (min-height: 750px) {
                 display: none;
@@ -95,7 +106,7 @@ header {
             left: 0;
             right: 0;
             margin: 0 auto;
-            top: 10vh;
+            top: 90px;
             background-color: #000;
             color: #fff;
             display: grid;
@@ -159,13 +170,16 @@ header {
             @media(orientation: landscape) {
                 right: 40px;
             }
+
+            @media(orientation: landscape) and (min-width: 1024px) {
+                right: 0;
+            }
         }
 
         div {
             margin: 5px;
             font-weight: normal;
             padding: 2px 8px;
-            // list-style: none;
 
             @media(min-width: 750px) {
                 border: 2px solid #fff;
@@ -183,10 +197,28 @@ header {
             a {
                 text-decoration: none;
                 color: #000;
+                display: block;
 
                 @media(min-width: 750px) {
                     color: #fff;
                 }
+            }
+        }
+
+        .navMgla,
+        .navKsm,
+        .navNoSolace,
+        .navContact,
+        .navStore,
+        .digitalGrid1,
+        .digitalGrid2,
+        .ordersGrid1,
+        .ordersGrid2 {
+            cursor: pointer;
+            transition: .2s;
+
+            &:hover {
+                background-color: #666;
             }
         }
     }
@@ -393,6 +425,12 @@ header {
     @media(orientation: landscape) {
         img {
             max-width: 60%;
+        }
+    }
+
+    @media(orientation: landscape) and (min-width: 1024px) {
+        img {
+            max-width: 95%;
         }
     }
 }

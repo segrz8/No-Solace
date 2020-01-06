@@ -39,6 +39,12 @@ header {
   }
 }
 
+@media (min-height: 1024px) {
+  header {
+    height: 90px;
+  }
+}
+
 @media (min-width: 750px) {
   header {
     -webkit-box-shadow: none;
@@ -46,8 +52,16 @@ header {
   }
 }
 
-header img {
+@media (min-width: 1024px) {
+  header {
+    height: 90px;
+    width: 750px;
+  }
+}
+
+header .noSolaceLogo {
   width: 95%;
+  max-height: 87px;
   max-width: 750px;
 }
 
@@ -72,6 +86,7 @@ header img {
   top: 10vh;
   -webkit-animation: glow 2s infinite linear;
           animation: glow 2s infinite linear;
+  cursor: pointer;
 }
 
 @media (min-width: 750px) and (min-height: 750px) {
@@ -125,7 +140,7 @@ header img {
     left: 0;
     right: 0;
     margin: 0 auto;
-    top: 10vh;
+    top: 90px;
     background-color: #000;
     color: #fff;
     display: -ms-grid;
@@ -215,6 +230,12 @@ header img {
   }
 }
 
+@media (orientation: landscape) and (min-width: 1024px) {
+  .wrap .nav--open {
+    right: 0;
+  }
+}
+
 .wrap .nav div {
   margin: 5px;
   font-weight: normal;
@@ -239,12 +260,39 @@ header img {
 .wrap .nav div a {
   text-decoration: none;
   color: #000;
+  display: block;
 }
 
 @media (min-width: 750px) {
   .wrap .nav div a {
     color: #fff;
   }
+}
+
+.wrap .nav .navMgla,
+.wrap .nav .navKsm,
+.wrap .nav .navNoSolace,
+.wrap .nav .navContact,
+.wrap .nav .navStore,
+.wrap .nav .digitalGrid1,
+.wrap .nav .digitalGrid2,
+.wrap .nav .ordersGrid1,
+.wrap .nav .ordersGrid2 {
+  cursor: pointer;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.wrap .nav .navMgla:hover,
+.wrap .nav .navKsm:hover,
+.wrap .nav .navNoSolace:hover,
+.wrap .nav .navContact:hover,
+.wrap .nav .navStore:hover,
+.wrap .nav .digitalGrid1:hover,
+.wrap .nav .digitalGrid2:hover,
+.wrap .nav .ordersGrid1:hover,
+.wrap .nav .ordersGrid2:hover {
+  background-color: #666;
 }
 
 @media (min-width: 750px) {
@@ -523,6 +571,12 @@ header img {
 @media (orientation: landscape) {
   .wrap img {
     max-width: 60%;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+  .wrap img {
+    max-width: 95%;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -6,7 +6,6 @@ function openNav() {
 }
 
 burger.addEventListener('click', openNav)
-
 class DiscographyOpener {
     constructor() {
         document.querySelector('.arrow-mgla').addEventListener('click', () => this.handleDiscography('mgla'))
@@ -30,16 +29,8 @@ class DiscographyOpener {
             top: document.querySelector(`.arrow-${subject}`).offsetTop - 120,
             behavior: 'smooth'
         })
-
-        // if (!this.discographyOpen) {
-        //     window.scrollTo({
-        //         top: this.discographySubject.offsetTop - 120,
-        //         behavior: 'smooth'
-        //     })
-        // }
-
-        // this.discographyOpen = !this.discographyOpen
     }
+
     handleNav = (subject) => {
         this.navSubject = document.querySelector(`.${subject}`)
 
