@@ -11,7 +11,15 @@ body {
   color: #fff;
 }
 
-header {
+.wrap {
+  max-width: 750px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.wrap header {
   position: fixed;
   height: 10vh;
   background-color: #000;
@@ -34,43 +42,48 @@ header {
 }
 
 @media (orientation: landscape) {
-  header {
+  .wrap header {
     height: 20vh;
   }
 }
 
 @media (min-height: 1024px) {
-  header {
+  .wrap header {
     height: 90px;
   }
 }
 
 @media (min-width: 750px) {
-  header {
+  .wrap header {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
 }
 
 @media (min-width: 1024px) {
-  header {
+  .wrap header {
     height: 90px;
     width: 750px;
   }
 }
 
-header .noSolaceLogo {
+.wrap header .noSolaceLogo {
   width: 95%;
   max-height: 87px;
   max-width: 750px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.wrap {
-  max-width: 750px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
+.wrap header .noSolaceLogo img {
+  width: 100%;
 }
 
 .wrap .menu {

@@ -10,50 +10,57 @@ body {
     color: #fff;
 }
 
-header {
-    position: fixed;
-    height: 10vh;
-    background-color: #000;
-    width: 100%;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 23px 44px 12px rgba(0, 0, 0, 1);
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-
-    @media (orientation: landscape) {
-        height: 20vh;
-    }
-
-    @media (min-height: 1024px) {
-        height: 90px;
-    }
-
-    @media(min-width: 750px) {
-        box-shadow: none;
-    }
-
-    @media (min-width: 1024px) {
-        height: 90px;
-        width: 750px;
-    }
-
-    .noSolaceLogo {
-        width: 95%;
-        max-height: 87px;
-        max-width: 750px;
-    }
-}
-
 .wrap {
     max-width: 750px;
     position: absolute;
     left: 0;
     right: 0;
     margin: auto;
+
+    header {
+        position: fixed;
+        height: 10vh;
+        background-color: #000;
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 23px 44px 12px rgba(0, 0, 0, 1);
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+
+        @media (orientation: landscape) {
+            height: 20vh;
+        }
+
+        @media (min-height: 1024px) {
+            height: 90px;
+        }
+
+        @media(min-width: 750px) {
+            box-shadow: none;
+        }
+
+        @media (min-width: 1024px) {
+            height: 90px;
+            width: 750px;
+        }
+
+        .noSolaceLogo {
+            width: 95%;
+            max-height: 87px;
+            max-width: 750px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
 
     .menu {
         height: 15vh;

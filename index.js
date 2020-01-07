@@ -30,12 +30,12 @@ class DiscographyOpener {
     }
 
     handleNav = (subject) => {
+        nav.classList.toggle('nav--open')
+
         window.scrollTo({
             top: document.querySelector(`.${subject}`).offsetTop - 80,
-            behavior: 'smooth',
+            // behavior: 'smooth',
         })
-
-        nav.classList.toggle('nav--open')
     }
 }
 
