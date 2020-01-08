@@ -23,14 +23,14 @@ class DiscographyOpener {
     handleDiscography = (subject) => {
         document.querySelector(`.${subject}__discography`).classList.toggle(`${subject}__discography--open`)
 
-        // window.scrollTo({
-        //     top: document.querySelector(`.arrow-${subject}`).offsetTop - 120,
+        window.scrollTo({
+            top: document.querySelector(`.arrow-${subject}`).offsetTop - 120,
+            // behavior: 'smooth',
+        })
+
+        // document.querySelector(`.${subject}__discography`).scrollIntoView({
         //     behavior: 'smooth',
         // })
-
-        document.querySelector(`.${subject}__discography`).scrollIntoView({
-            behavior: 'smooth',
-        })
     }
 
     handleNav = (subject) => {
