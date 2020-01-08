@@ -21,7 +21,7 @@ body {
 
 .wrap header {
   position: fixed;
-  height: 45px;
+  height: 8vh;
   background-color: #000;
   width: 100%;
   z-index: 1;
@@ -69,7 +69,6 @@ body {
 @media (min-width: 1024px) {
   .wrap header {
     height: 90px;
-    width: 750px;
   }
 }
 
@@ -102,7 +101,7 @@ body {
   position: fixed;
   z-index: 1;
   right: 10px;
-  top: 50px;
+  top: 8vh;
   -webkit-animation: glow 2s infinite linear;
           animation: glow 2s infinite linear;
   cursor: pointer;
@@ -141,7 +140,7 @@ body {
 .wrap .nav {
   position: fixed;
   right: -100vw;
-  top: 80px;
+  top: 12vh;
   background-color: #fff;
   margin-top: 5px;
   color: #000;
@@ -159,7 +158,7 @@ body {
     left: 0;
     right: 0;
     margin: 0 auto;
-    top: 91px;
+    top: 90px;
     background-color: #000;
     color: #fff;
     display: -ms-grid;
@@ -267,7 +266,7 @@ body {
   .wrap .nav div {
     border: 1px solid #fff;
     margin: 0;
-    padding: 5px;
+    padding: 2px;
     font-size: 14px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -602,6 +601,20 @@ body {
   font-weight: bold;
   background-color: #fff;
   border: #666 2px solid;
+}
+
+@media (min-width: 1024px) {
+  .wrap .contact form input.send,
+  .wrap .contact form textarea.send {
+    cursor: pointer;
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+  .wrap .contact form input.send:hover,
+  .wrap .contact form textarea.send:hover {
+    background-color: #000;
+    color: #fff;
+  }
 }
 
 @media (orientation: landscape) {
