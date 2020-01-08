@@ -23,18 +23,26 @@ class DiscographyOpener {
     handleDiscography = (subject) => {
         document.querySelector(`.${subject}__discography`).classList.toggle(`${subject}__discography--open`)
 
-        window.scrollTo({
-            top: document.querySelector(`.arrow-${subject}`).offsetTop - 120,
-            // behavior: 'smooth',
+        // window.scrollTo({
+        //     top: document.querySelector(`.arrow-${subject}`).offsetTop - 120,
+        //     behavior: 'smooth',
+        // })
+
+        document.querySelector(`.${subject}__discography`).scrollIntoView({
+            behavior: 'smooth',
         })
     }
 
     handleNav = (subject) => {
         nav.classList.toggle('nav--open')
 
-        window.scrollTo({
-            top: document.querySelector(`.${subject}`).offsetTop - 80,
-            // behavior: 'smooth',
+        // window.scrollTo({
+        //     top: document.querySelector(`.${subject}`).offsetTop - 80,
+        //     behavior: 'smooth',
+        // })
+
+        document.querySelector(`.${subject}`).scrollIntoView({
+            behavior: 'smooth',
         })
     }
 }
