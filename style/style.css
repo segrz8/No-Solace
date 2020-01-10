@@ -63,6 +63,7 @@ body {
   .wrap header {
     -webkit-box-shadow: none;
             box-shadow: none;
+    position: absolute;
   }
 }
 
@@ -92,7 +93,13 @@ body {
 }
 
 .wrap .menu {
-  height: 15vh;
+  height: 12vh;
+}
+
+@media (min-width: 750px) {
+  .wrap .menu {
+    height: 90px;
+  }
 }
 
 .wrap .menu i {
@@ -107,7 +114,7 @@ body {
   cursor: pointer;
 }
 
-@media (min-width: 750px) and (min-height: 750px) {
+@media (min-width: 750px) and (min-height: 450px) {
   .wrap .menu i {
     display: none;
   }
@@ -169,6 +176,9 @@ body {
     max-width: 760px;
     border: none;
     gap: 1px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
   }
   .wrap .nav .infoGrid {
     -ms-grid-row: 1;
@@ -323,11 +333,25 @@ body {
   background-color: #666;
 }
 
+.wrap .nav .navStore,
+.wrap .nav .ordersGrid,
+.wrap .nav .ordersGrid2 {
+  -o-border-image: linear-gradient(90deg, #fff, #000) 1;
+     border-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#000)) 1;
+     border-image: linear-gradient(90deg, #fff, #000) 1;
+}
+
+.wrap .nav .infoGrid,
+.wrap .nav .digitalGrid,
+.wrap .nav .digitalGrid1 {
+  -o-border-image: linear-gradient(-90deg, #fff, #000) 1;
+     border-image: -webkit-gradient(linear, right top, left top, from(#fff), to(#000)) 1;
+     border-image: linear-gradient(-90deg, #fff, #000) 1;
+}
+
 @media (min-width: 750px) {
   .wrap main {
-    position: absolute;
-    top: 24vh;
-    z-index: -1;
+    margin-top: 7vh;
   }
 }
 

@@ -46,6 +46,7 @@ body {
 
         @media(min-width: 750px) {
             box-shadow: none;
+            position: absolute;
         }
 
         @media (min-width: 1024px) {
@@ -68,7 +69,11 @@ body {
     }
 
     .menu {
-        height: 15vh;
+        height: 12vh;
+
+        @media(min-width: 750px) {
+            height: 90px;
+        }
 
         i {
             font-size: 25px;
@@ -80,7 +85,7 @@ body {
             animation: glow 2s infinite linear;
             cursor: pointer;
 
-            @media(min-width: 750px) and (min-height: 750px) {
+            @media(min-width: 750px) and (min-height: 450px) {
                 display: none;
             }
 
@@ -130,6 +135,8 @@ body {
             max-width: 760px;
             border: none;
             gap: 1px;
+            position: sticky;
+            top: 0;
 
             .infoGrid {
                 grid-area: infoGrid;
@@ -237,13 +244,26 @@ body {
                 background-color: #666;
             }
         }
+
+        .navStore,
+        .ordersGrid,
+        .ordersGrid2 {
+            border-image: linear-gradient(90deg, #fff, #000) 1;
+        }
+
+        .infoGrid,
+        .digitalGrid,
+        .digitalGrid1 {
+            border-image: linear-gradient(-90deg, #fff, #000) 1;
+        }
     }
 
     main {
         @media(min-width: 750px) {
-            position: absolute;
-            top: 24vh;
-            z-index: -1;
+            // position: absolute;
+            // top: 24vh;
+            // z-index: -1;
+            margin-top: 7vh;
         }
 
         .front {
