@@ -21,23 +21,24 @@ var DiscographyOpener = function DiscographyOpener() {
     _classCallCheck(this, DiscographyOpener);
 
     _defineProperty(this, "handleDiscography", function (subject) {
-        _this.discographySubject = document.querySelector(".".concat(subject, "__discography"));
-
-        _this.discographySubject.classList.toggle("".concat(subject, "__discography--open"));
-
+        document.querySelector(".".concat(subject, "__discography")).classList.toggle("".concat(subject, "__discography--open"));
         window.scrollTo({
-            top: document.querySelector(".arrow-".concat(subject)).offsetTop - 120,
-            behavior: 'smooth'
-        });
+            top: document.querySelector(".arrow-".concat(subject)).offsetTop - 120 // behavior: 'smooth',
+
+        }); // document.querySelector(`.${subject}__discography`).scrollIntoView({
+        //     behavior: 'smooth',
+        // })
     });
 
     _defineProperty(this, "handleNav", function (subject) {
-        _this.navSubject = document.querySelector(".".concat(subject));
-        window.scrollTo({
-            top: document.querySelector(".".concat(subject)).offsetTop - 80,
+        nav.classList.toggle('nav--open'); // window.scrollTo({
+        //     top: document.querySelector(`.${subject}`).offsetTop - 80,
+        //     behavior: 'smooth',
+        // })
+
+        document.querySelector(".".concat(subject)).scrollIntoView({
             behavior: 'smooth'
         });
-        nav.classList.toggle('nav--open');
     });
 
     document.querySelector('.arrow-mgla').addEventListener('click', function () {
