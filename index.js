@@ -25,7 +25,7 @@ class DiscographyOpener {
 
         window.scrollTo({
             top: document.querySelector(`.arrow-${subject}`).offsetTop - 120,
-            // behavior: 'smooth',
+            behavior: 'smooth',
         })
 
         // document.querySelector(`.${subject}__discography`).scrollIntoView({

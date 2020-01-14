@@ -23,8 +23,8 @@ var DiscographyOpener = function DiscographyOpener() {
     _defineProperty(this, "handleDiscography", function (subject) {
         document.querySelector(".".concat(subject, "__discography")).classList.toggle("".concat(subject, "__discography--open"));
         window.scrollTo({
-            top: document.querySelector(".arrow-".concat(subject)).offsetTop - 120 // behavior: 'smooth',
-
+            top: document.querySelector(".arrow-".concat(subject)).offsetTop - 120,
+            behavior: 'smooth'
         }); // document.querySelector(`.${subject}__discography`).scrollIntoView({
         //     behavior: 'smooth',
         // })
