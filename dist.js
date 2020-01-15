@@ -24,17 +24,11 @@ var DiscographyOpener = function DiscographyOpener() {
         document.querySelector(".".concat(subject, "__discography")).classList.toggle("".concat(subject, "__discography--open"));
         window.scrollTo({
             top: document.querySelector(".arrow-".concat(subject)).offsetTop - 120,
-            // behavior: 'smooth'
-        }); // document.querySelector(`.${subject}__discography`).scrollIntoView({
-        //     behavior: 'smooth',
-        // })
+        });
     });
 
     _defineProperty(this, "handleNav", function (subject) {
-        nav.classList.toggle('nav--open'); // window.scrollTo({
-        //     top: document.querySelector(`.${subject}`).offsetTop - 80,
-        //     behavior: 'smooth',
-        // })
+        nav.classList.toggle('nav--open');
 
         document.querySelector(".".concat(subject)).scrollIntoView({
             behavior: 'smooth'
